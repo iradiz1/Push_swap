@@ -6,7 +6,7 @@
 /*   By: hzibari <hzibari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/10 14:52:54 by hzibari           #+#    #+#             */
-/*   Updated: 2024/01/11 12:12:19 by hzibari          ###   ########.fr       */
+/*   Updated: 2024/01/22 11:41:40 by hzibari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ static void	swap(t_list *stack)
 	temp_val = stack->content;
 	stack->content = temp->content;
 	temp->content = temp_val;
+	temp_val = stack->index;
+	stack->index = stack->next->index;
+	stack->next->index = temp_val;
 }
 
 void	sa(t_list *stack_a)

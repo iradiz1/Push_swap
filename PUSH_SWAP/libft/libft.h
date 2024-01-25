@@ -6,7 +6,7 @@
 /*   By: hzibari <hzibari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 14:31:26 by hzibari           #+#    #+#             */
-/*   Updated: 2024/01/11 11:09:59 by hzibari          ###   ########.fr       */
+/*   Updated: 2024/01/25 12:38:30 by hzibari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,15 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
-# include <stdio.h>
 
 typedef struct s_list
 {
 	int				content;
+	int				target;
+	int				index;
+	int				pos;
+	int				cost_b;
+	int				cost_a;
 	struct s_list	*next;
 }				t_list;
 

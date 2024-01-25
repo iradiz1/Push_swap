@@ -6,17 +6,23 @@
 /*   By: hzibari <hzibari@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/31 11:29:23 by hzibari           #+#    #+#             */
-/*   Updated: 2024/01/05 12:11:18 by hzibari          ###   ########.fr       */
+/*   Updated: 2024/01/25 12:17:22 by hzibari          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
+static void	ft_error(char *msg)
+{
+	ft_putendl_fd(msg, 2);
+	exit (0);
+}
+
 int	ft_atoi(const char *str)
 {
-	long		i;
-	long		m;
-	long long	p;
+	int long		i;
+	int long		m;
+	int long long	p;
 
 	i = 0;
 	m = 1;
@@ -34,7 +40,7 @@ int	ft_atoi(const char *str)
 		p = p * 10 + (str[i] - 48);
 		i++;
 	}
-	if (str[i] < 48 && str[i] > 57)
-		return (0);
+	if (p * m > 2147483647 || p * m < -2147483648)
+		ft_error("Error");
 	return (p * m);
 }

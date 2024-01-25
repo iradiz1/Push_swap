@@ -6,7 +6,7 @@
 #    By: hzibari <hzibari@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/11/01 14:33:04 by hzibari           #+#    #+#              #
-#    Updated: 2024/01/11 12:03:20 by hzibari          ###   ########.fr        #
+#    Updated: 2024/01/24 11:43:48 by hzibari          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,7 +20,12 @@ SRCS	=	push_swap.c \
 			swap.c \
 			push.c \
 			rotate.c \
-			reverse_rotate.c
+			reverse_rotate.c \
+			eazy_sorters.c \
+			big_sorter.c \
+			targets_and_cost.c \
+			position_and_index.c \
+			move.c
 
 OFILES	=	$(SRCS:.c=.o)
 
